@@ -1,0 +1,132 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\newtheorem{theorem}{Théorème}
+\newtheorem{definition}{Définition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemme}{Lemme}
+\newtheorem{corollaire}{Corollaire}
+\newtheorem{remarque}{Remarque}
+\newtheorem{exemple}{Exemple}
+\newtheorem{exercice}{Exercice}
+
+\title{Analyse Complexe}
+\author{cyrilschkrill}
+
+\begin{document}
+\maketitle
+\part{Introduction à l'Analyse Complexe}
+
+
+
+\section{Rappels sur les nombres complexes}
+\begin{definition} \text{ } \\
+	Nombres complexes. Lois de Compositions.
+\end{definition}
+
+\begin{proposition}  \text{ } \\
+	$ ( \mathbb{C},+,\times ) $ est un corps 
+\end{proposition}
+
+\begin{corollaire}  \text{ }  \\
+	$ \mathbb{R} < \mathbb{C}$ est un sous-corps
+\end{collolaire}
+
+\begin{corollaire}  \text{ } \\
+	$ \pm i$ sont les deux seules racines de -1
+\end{collolaire}
+
+\begin{remarque}  \text{ } \\
+	$ \mathrm{dim}_{ \mathbb{R}} \mathbb{C} = 2$ tandis que  $ \mathrm{dim}_{ \mathbb{C}} \mathbb{C} = 1$
+\end{remarque}
+
+\begin{definition} \text{Partie rélle et imaginaire. Relations avec le conjugué.
+}\\	
+\end{definition}
+
+
+
+\section{Géométrie et linéarité complexe}
+\begin{proposition}  \text{ } \\
+	\begin{itemize}
+		\item Homothétie de rapport $\rho \in{} \mathbb{R}$ et de centre $ 0$ 
+			$$ z \in{} \mathbb{C} \longmapsto \rho\cdot{}z $$ 
+		\item Rotation d'angle $\theta$ de centre $ 0$
+			$$ z \in{} \mathbb{C} \longmapsto z\cdot{}\mathrm{e}^{i\theta} $$ 
+		\item Réflexion par rapport à l'axes des abscisses \\
+			$$ z \in{} \mathbb{C} \longmapsto \bar{z} $$ 		
+	\end{itemize}
+\end{proposition}
+
+\begin{definition} \text{Similitudes} \\
+	C'est la composée d'une homothétie de rapport scrictement positif et d'une rotation - toutes deux centrées en zéro.
+\end{definition}
+
+\begin{proposition}  \text{ } \\
+	$ (\forall{}u \in{} \mathcal{L}_{ \mathbb{R}}( \mathbb{C})) $ \\
+$$
+	\begin{tabular}{l c}
+		$u: \mathbb{C}\text{-linéaire}$ & \\
+		& \iff \\
+		u(i) = i\cdot{}u(1) & \\
+		& \iff \\
+		Mat_{(1,i)}u = \begin{bmatrix} a & b \\ -b & a \end{bmatrix}& \\
+		& \iff \\
+		\text{ $u=0$ XOR u est une similitude}
+
+	\end{tabular}
+$$
+	Lorsque $u\neq{}0$, \\
+	$u$ est $ \mathbb{C}$-linéaire, si et seulement si, c'est une similitude.
+\end{proposition}
+
+\begin{definition} \text{ } \\
+	Un endomorphisme (\textit{ie} un morphisme de $ \mathbb{C} $ dans lui-même), est dit \textbf{conforme} s'il est bijectif, $ \mathbb{R} $-linéaire, et préserve les angles. 
+\end{definition}
+\begin{proposition}  \text{ } \\
+Soit $u \in{} \mathcal{L}_\mathbb{R}(\mathbb{C}})\quad u\neq0$ 
+
+$$ u: \mathbb{C}\text{-linéaire} \iff u \text{ est conforme} $$
+\end{proposition}
+
+
+
+\section{Différentiabilité au sens complexe}
+\begin{definition} \text{ } \\
+	$ \mathbb{C} $-différentiable ou dérivable
+\end{definition}
+
+\begin{definition} \text{ } \\
+	$f:\Omega\longrightarrow \mathbb{C}$ est $ \mathbb{R}$-différentiable 
+\end{definition}
+\begin{theorem} \text{ } \\
+	$$ f: \mathbb{C}\text{-dérivable en $a$} $$ 
+		$$ \iff $$ 
+		$$ f: \mathbb{R}\text{-différentiable en a} \quad \text{ et } \quad \mathrm{D}f_a{}: \mathbb{C}\text{-linéaire} $$
+\end{center}
+
+
+
+\section{Fonctions holomorphes}
+\begin{definition} \text{ } \\
+Ensembles des fonctions holomorphes
+\end{definition}
+\begin{exemple} \text{ }  \\
+	\begin{itemize}
+		\item La propriété d'holomorphie est conservée: par l'addition, la multiplication d'un scalaire complexe, ainsi que le produit de fonctions.
+		\item L'ensemble des fonctions holomorphes est une sous-algèbre des fonctions continues.
+		\item Les polynômes à coefficients complexes sont holomorphes
+		\item Une fraction rationnelle complexe est holomorphe sur le complémentaire dans $ \mathbb{C}$ de l'ensemble de ses pôles.
+		\item La composée de fonctions est holomorphe, et suit la dérivation des fonctions composées.
+	\end{itemize}
+\end{exemple}
+
+\begin{proposition}  \text{Théorème des Accroissements finis complexe } \\
+	$$ |f(z_1)-f(z_2)| \leg |z_1 - z_2|\sup_{[z_1,z_2]}|f^\prime $$ 
+\end{proposition}
+
+\begin{proposition}  \text{ } \\
+	\forall{}f\in \mathcal{O}(\Omega)\quad f^\prime = 0 \implies f\text{ est constante.}
+\end{proposition}
+
+\end{document}
